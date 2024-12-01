@@ -17,10 +17,11 @@ BAUD = 1200
 
 def baudout(s):
     out = sys.stdout
-    for c in s:
-        sleep(9. / BAUD)  # 8 bits + 1 stop bit @ the given baud rate
-        out.write(c)
-        out.flush()
+    out.write(s)
+    # for c in s:
+    #     sleep(9. / BAUD)  # 8 bits + 1 stop bit @ the given baud rate
+    #     out.write(c)
+    out.flush()
 
 def loop(args):
     parser = argparse.ArgumentParser(
