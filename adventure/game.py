@@ -67,7 +67,7 @@ class Game(Data):
     def write(self, more):
         """Append the Unicode representation of `s` to our output."""
         if more:
-            self.output += str(more).upper()
+            self.output += str(more).lower()
             self.output += '\n'
 
     def write_message(self, n):
