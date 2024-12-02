@@ -382,7 +382,7 @@ class Game(Data):
                 else:
                     prop = obj.prop
 
-                self.write(obj.messages[prop])
+                self.write(f"\033[1m{obj.messages[prop].strip()}\033[0m")
 
         self.finish_turn()
 
